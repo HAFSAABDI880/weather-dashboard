@@ -3,3 +3,7 @@
     background:linear-gradient(##2B3E5D,  #0bc7a1ed);
     height:75px;
 }
+.navbar-brand {
+    font-size: 36px;
+    color: white;
+} 
