@@ -24,7 +24,7 @@ function getCurrentWeather(city) {
       })
       .then(function (data) {
         console.log(data);
-        
+
         let nameValue = data.name;
         cityName.innerHTML = nameValue + " " + currentDate;
         console.log(nameValue);
@@ -36,3 +36,17 @@ function getCurrentWeather(city) {
           "https://openweathermap.org/img/wn/" + currentIconValue + "@2x.png"
         );
         console.log(currentIconValue);
+        
+        let tempValue = data.main.temp;
+        let celsiusTemp = tempValue - 273.15;
+        currentTemperature.innerHTML =
+          "Temp:" + " " + Math.floor(celsiusTemp) + "°C";
+        console.log(tempValue);
+  
+        let humidityValue = data.main.humidity;
+        currentHumidity.innerHTML = "Humidity:" + " " + humidityValue + "%";
+        console.log(humidityValue);
+  
+        let windSpeedValue = data.wind.speed;
+        currentWindSpeed.innerHTML = "Wind:" + " " + windSpeedValue + " " + "MPH";
+        console.log(windSpeedValue);
