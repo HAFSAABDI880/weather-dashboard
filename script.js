@@ -24,4 +24,15 @@ function getCurrentWeather(city) {
       })
       .then(function (data) {
         console.log(data);
-    
+        
+        let nameValue = data.name;
+        cityName.innerHTML = nameValue + " " + currentDate;
+        console.log(nameValue);
+  
+        let currentIconValue = data.weather[0].icon;
+        currentIcon.innerHTML = "Icon:" + currentIconValue;
+        currentIcon.setAttribute(
+          "src",
+          "https://openweathermap.org/img/wn/" + currentIconValue + "@2x.png"
+        );
+        console.log(currentIconValue);
