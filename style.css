@@ -1,9 +1,19 @@
-#nav-bar{
+.nav-bar{
     background-color:rgb(0, 174, 255);(3, 121, 111);
-    background:linear-gradient(##2B3E5D,  #0bc7a1ed);
+    background:linear-gradient( ##2B3E5D,#0bc7a1ed);
     height:75px;
 }
 .navbar-brand {
     font-size: 36px;
     color: white;
 } 
+
+#search-bar{
+    align-items: center;
+}
+
+.card{
+    background: linear-gradient(#096f79,  #0bc7a1ed);
+    margin-bottom: 20px;
+    font-size: 20px;
+}
